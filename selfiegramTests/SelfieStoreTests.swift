@@ -28,4 +28,25 @@ class SelfieStoreTests: XCTestCase {
         return UIGraphicsGetImageFromCurrentImageContext()!
     }
     
+    func testCreatingSelfie() {
+        let selfieTitle = "Creation Test Selfie"
+        let newSelfie = Selfie(title: selfieTitle)
+        
+        do{
+            try SelfieStore.shared.save(selfie: newSelfie)
+        } catch SelfieStoreError.cannotSaveImage(nil) {
+            XCTFail("Could not save image.")
+        } catch {
+            XCTFail("Unknown error.")
+        }
+        
+        let allSelfies = try! SelfieStore.shared.listSelfies()
+        
+        guard let theSelfie = allSelfies.first(where: {$0.id == newSelfie.id}) else {
+            XCTFail("Selfies should contain the image we created.")
+            return
+        }
+        
+        XCTAssertEqual(selfieTitle, theSelfie.title)
+    }
 }
