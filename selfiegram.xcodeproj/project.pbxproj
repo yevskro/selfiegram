@@ -15,6 +15,7 @@
 		32B4E15D20EBAABE00AE2BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B4E15B20EBAABE00AE2BC1 /* LaunchScreen.storyboard */; };
 		32B4E16820EBAABF00AE2BC1 /* selfiegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E16720EBAABF00AE2BC1 /* selfiegramTests.swift */; };
 		32B4E17320EBAABF00AE2BC1 /* selfiegramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E17220EBAABF00AE2BC1 /* selfiegramUITests.swift */; };
+		32B4E18120EBC3A700AE2BC1 /* SelfieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E18020EBC3A700AE2BC1 /* SelfieStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		32B4E16E20EBAABF00AE2BC1 /* selfiegramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = selfiegramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B4E17220EBAABF00AE2BC1 /* selfiegramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selfiegramUITests.swift; sourceTree = "<group>"; };
 		32B4E17420EBAABF00AE2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32B4E18020EBC3A700AE2BC1 /* SelfieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				32B4E15220EBAAB600AE2BC1 /* MasterViewController.swift */,
 				32B4E15420EBAAB600AE2BC1 /* DetailViewController.swift */,
 				32B4E15620EBAAB600AE2BC1 /* Main.storyboard */,
+				32B4E18020EBC3A700AE2BC1 /* SelfieStore.swift */,
 				32B4E15920EBAABE00AE2BC1 /* Assets.xcassets */,
 				32B4E15B20EBAABE00AE2BC1 /* LaunchScreen.storyboard */,
 				32B4E15E20EBAABE00AE2BC1 /* Info.plist */,
@@ -262,6 +265,7 @@
 				32B4E15520EBAAB600AE2BC1 /* DetailViewController.swift in Sources */,
 				32B4E15320EBAAB600AE2BC1 /* MasterViewController.swift in Sources */,
 				32B4E15120EBAAB600AE2BC1 /* AppDelegate.swift in Sources */,
+				32B4E18120EBC3A700AE2BC1 /* SelfieStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
