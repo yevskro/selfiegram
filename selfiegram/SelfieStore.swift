@@ -62,7 +62,7 @@ final class SelfieStore{
         throw SelfieStoreError.cannotSaveImage(nil)
     }
     
-    func load(id: UUID) throws -> Selfie? {
+    func load(id: UUID) -> Selfie? {
         return nil
     }
     

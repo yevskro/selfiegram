@@ -30,23 +30,58 @@ class SelfieStoreTests: XCTestCase {
     
     func testCreatingSelfie() {
         let selfieTitle = "Creation Test Selfie"
+        // create new selfie
         let newSelfie = Selfie(title: selfieTitle)
         
-        do{
-            try SelfieStore.shared.save(selfie: newSelfie)
-        } catch SelfieStoreError.cannotSaveImage(nil) {
-            XCTFail("Could not save image.")
-        } catch {
-            XCTFail("Unknown error.")
-        }
+        // try to save the file
+        try? SelfieStore.shared.save(selfie: newSelfie)
         
+        // get all selfies
         let allSelfies = try! SelfieStore.shared.listSelfies()
         
+        // try to find the selfie we created
         guard let theSelfie = allSelfies.first(where: {$0.id == newSelfie.id}) else {
             XCTFail("Selfies should contain the image we created.")
             return
         }
         
         XCTAssertEqual(selfieTitle, theSelfie.title)
+    }
+    
+    func testSavingImage() throws {
+        let selfieTitle = "Saving Test Selfie"
+        let newSelfie = Selfie(title: selfieTitle)
+        
+        // newSelfie.image
+        try SelfieStore.shared.save(selfie: newSelfie)
+        
+        let loadedImage = SelfieStore.shared.getImage(id: newSelfie.id)
+        
+        XCTAssertNotNil(loadedImage, "The image should be loaded.")
+    }
+    
+    func testLoadingSelfie() throws {
+        let selfieTitle = "Loading Test Selfie"
+        let newSelfie = Selfie(title: selfieTitle)
+        try SelfieStore.shared.save(selfie: newSelfie)
+        
+        let loadedSelfie = SelfieStore.shared.load(id: newSelfie.id)
+        XCTAssertNotNil(loadedSelfie, "The selfie should not be nil.")
+        XCTAssertEqual(loadedSelfie?.id, newSelfie.id, "The selfies should have the same id.")
+        XCTAssertEqual(loadedSelfie?.title, newSelfie.title, "The selfies should have the same title.")
+        XCTAssertEqual(loadedSelfie?.created, newSelfie.created, "The selfies should have the same creation date.")
+    }
+    
+    func testDeletingSelfie() throws {
+        let selfieTitle = "Deleting Test Selfie"
+        let newSelfie = Selfie(title: selfieTitle)
+        try SelfieStore.shared.save(selfie: newSelfie)
+        
+        let allSelfies = try SelfieStore.shared.listSelfies()
+        try SelfieStore.shared.delete(selfie: newSelfie)
+        let selfiestAfterDelete = try SelfieStore.shared.listSelfies()
+        let loadedSelfie = SelfieStore.shared.load(id: newSelfie.id)
+        XCTAssertEqual(allSelfies.count - 1, selfiestAfterDelete.count, "Should be one less selfie after delete.")
+        XCTAssertNil(loadedSelfie, "Loading selfie after delete should return nil")
     }
 }
