@@ -52,7 +52,7 @@ class SelfieStoreTests: XCTestCase {
         let selfieTitle = "Saving Test Selfie"
         let newSelfie = Selfie(title: selfieTitle)
         
-        // newSelfie.image
+        newSelfie.image = createImage(text: selfieTitle)
         try SelfieStore.shared.save(selfie: newSelfie)
         
         let loadedImage = SelfieStore.shared.getImage(id: newSelfie.id)
