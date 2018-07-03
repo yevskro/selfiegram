@@ -16,6 +16,7 @@
 		32B4E16820EBAABF00AE2BC1 /* selfiegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E16720EBAABF00AE2BC1 /* selfiegramTests.swift */; };
 		32B4E17320EBAABF00AE2BC1 /* selfiegramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E17220EBAABF00AE2BC1 /* selfiegramUITests.swift */; };
 		32B4E18120EBC3A700AE2BC1 /* SelfieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E18020EBC3A700AE2BC1 /* SelfieStore.swift */; };
+		32B4E18320EBCBF800AE2BC1 /* SelfieStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E18220EBCBF800AE2BC1 /* SelfieStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		32B4E17220EBAABF00AE2BC1 /* selfiegramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selfiegramUITests.swift; sourceTree = "<group>"; };
 		32B4E17420EBAABF00AE2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32B4E18020EBC3A700AE2BC1 /* SelfieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieStore.swift; sourceTree = "<group>"; };
+		32B4E18220EBCBF800AE2BC1 /* SelfieStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				32B4E16720EBAABF00AE2BC1 /* selfiegramTests.swift */,
 				32B4E16920EBAABF00AE2BC1 /* Info.plist */,
+				32B4E18220EBCBF800AE2BC1 /* SelfieStoreTests.swift */,
 			);
 			path = selfiegramTests;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B4E16820EBAABF00AE2BC1 /* selfiegramTests.swift in Sources */,
+				32B4E18320EBCBF800AE2BC1 /* SelfieStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

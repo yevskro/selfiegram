@@ -25,6 +25,12 @@ class Selfie : Codable {
             
         }
     }*/
+
+    init(title: String){
+        self.title = title
+        self.created = Date()
+        self.id = UUID()
+    }
 }
 
 enum SelfieStoreError : Error {
@@ -66,3 +72,4 @@ final class SelfieStore{
         throw SelfieStoreError.cannotSaveImage(nil)
     }
 }
+
